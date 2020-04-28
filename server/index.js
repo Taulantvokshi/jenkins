@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use('/auth', require('./auth'));
-// app.use('/api', require('./api'));
+app.use('/api', require('./api'));
 
 app.use(express.static(path.join(__dirname, '..', '/public')));
 
