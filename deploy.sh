@@ -1,4 +1,3 @@
-#!/bin/sh
 ssh root@examples.buzz <<EOF
 sudo su taulantvokshi
  cd
@@ -12,4 +11,4 @@ sudo su taulantvokshi
 EOF
 
 
-# /home/taulantvokshi/jenkins
+
