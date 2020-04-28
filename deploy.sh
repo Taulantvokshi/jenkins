@@ -1,9 +1,11 @@
 #!/bin/sh
 ssh root@examples.buzz <<EOF
  pm2 stop all
- cd /home/taulantvokshi/jenkins
+ sudo su taulantvokshi
+ cd ~/jenkins
  git pull
- npm install — production
+ npm install
+ npm run production
  pm2 restart all
  exit
 EOF

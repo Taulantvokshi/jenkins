@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "compile-sass": "node-sass client/sass/imports.scss public/style.css -w",
-    "start-dev": "webpack -w & nodemon server/index.js & npm run compile-sass"
+    "sass-not-watch": "node-sass client/sass/imports.scss public/style.css",
+    "start-dev": "webpack -w & nodemon server/index.js & npm run compile-sass",
+    "production": "webpack & npm run sass-not-watch"
   },
   "keywords": [],
   "author": "",
