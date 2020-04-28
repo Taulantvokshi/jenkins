@@ -1,8 +1,6 @@
-ssh root@examples.buzz <<EOF
- sudo su taulantvokshi
- cd
- pm2 stop all
+ssh taulantvokshi@examples.buzz <<EOF
  cd ~/jenkins
+ pm2 stop all
  git pull
  npm install
  npm run production
