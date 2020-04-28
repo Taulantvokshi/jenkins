@@ -1,5 +1,5 @@
 ssh root@examples.buzz <<EOF
-sudo su taulantvokshi
+ sudo su taulantvokshi
  cd
  pm2 stop all
  cd ~/jenkins
