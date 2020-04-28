@@ -3,7 +3,10 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const socketIo = require('socket.io');
-const PORT = 8080;
+const parseArgs = require('minimist');
+
+const args = parseArgs(process.argv.slice(2));
+const { name = 'default', port = '8080' } = args;
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,8 +40,8 @@ app.use((err, req, res, next) => {
 });
 
 const startListening = () => {
-  const server = app.listen(PORT, () => {
-    console.log(`Mixing it up on port ${PORT}`);
+  const server = app.listen(+port, '0.0.0.0', () => {
+    console.log(`Mixing it up on port ${port}`);
   });
 
   // set up our socket control center

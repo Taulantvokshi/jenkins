@@ -36,3 +36,15 @@ body {
 .root {
   font-size: 1.6rem;
 }
+
+.Apps {
+  width: 100vw;
+  height: 100vh;
+  background-color: #30475e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > h1 {
+    color: white;
+  }
+}
