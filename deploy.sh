@@ -1,7 +1,8 @@
 #!/bin/sh
 ssh root@examples.buzz <<EOF
+sudo su taulantvokshi
+ cd
  pm2 stop all
- sudo su taulantvokshi
  cd ~/jenkins
  git pull
  npm install
@@ -9,3 +10,6 @@ ssh root@examples.buzz <<EOF
  pm2 restart all
  exit
 EOF
+
+
+# /home/taulantvokshi/jenkins
