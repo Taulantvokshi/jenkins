@@ -1,13 +1,7 @@
 #!/bin/sh
 echo 'I Pased this line'
 ssh -t -t taulantvokshi@examples.buzz <<EOF
- cd ~/jenkins
- pm2 stop all
-#  git pull
- npm install
- npm run production
- pm2 restart all
- exit
+echo 'hello inside'
 EOF
 
 
