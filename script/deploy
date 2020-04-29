@@ -1,3 +1,4 @@
+#!/bin/sh
 ssh taulantvokshi@examples.buzz <<EOF
  cd ~/jenkins
  pm2 stop all
