@@ -1,6 +1,6 @@
 #!/bin/sh
 echo 'I Pased this line'
-ssh -t -t taulantvokshi@examples.buzz <<'ENDSSH'
+ssh -t -t taulantvokshi@examples.buzz <<EOF
  cd ~/jenkins
  pm2 stop all
  git pull
@@ -8,7 +8,7 @@ ssh -t -t taulantvokshi@examples.buzz <<'ENDSSH'
  npm run production
  pm2 restart all
  exit
-ENDSSH
+EOF
 
 
 
