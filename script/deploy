@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh -t -t -R taulantvokshi@examples.buzz <<EOF
+ssh -t taulantvokshi@examples.buzz <<EOF
  cd ~/jenkins
  pm2 stop all
  git pull
