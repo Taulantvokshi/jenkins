@@ -6,7 +6,7 @@ const socketIo = require('socket.io');
 const parseArgs = require('minimist');
 
 const args = parseArgs(process.argv.slice(2));
-const { name = 'default', port = '8080' } = args;
+const { port = '8080' } = args;
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,8 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', require('./api'));
 
 //app.use(express.static(path.join(__dirname, '..', '/public')));
-
-// any remaining requests with an extension (.js, .css, etc.) send 404
+//any remaining requests with an extension (.js, .css, etc.) send 404
 app.use((req, res, next) => {
   if (path.extname(req.path).length) {
     const err = new Error('Not found');
